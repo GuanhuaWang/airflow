@@ -1,0 +1,289 @@
+[2019-08-05 20:46:52,715] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-08-05 20:46:52,937] {__init__.py:305} INFO - Filling up the DagBag from /home/ec2-user/airflow/dags
+[2019-08-05 20:46:53,949] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: GH_spark.pyspark_local_task_one 2016-12-01T00:00:00+00:00 [None]>
+[2019-08-05 20:46:53,953] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: GH_spark.pyspark_local_task_one 2016-12-01T00:00:00+00:00 [None]>
+[2019-08-05 20:46:53,953] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-05 20:46:53,954] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-08-05 20:46:53,954] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-05 20:46:53,954] {__init__.py:1374} INFO - Executing <Task(BashOperator): pyspark_local_task_one> on 2016-12-01T00:00:00+00:00
+[2019-08-05 20:46:53,967] {bash_operator.py:81} INFO - Tmp dir root location: 
+ /tmp
+[2019-08-05 20:46:53,968] {bash_operator.py:90} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=GH_spark
+AIRFLOW_CTX_TASK_ID=pyspark_local_task_one
+AIRFLOW_CTX_EXECUTION_DATE=2016-12-01T00:00:00+00:00
+[2019-08-05 20:46:53,968] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmpupvovjas/pyspark_local_task_oneowti4_i7
+[2019-08-05 20:46:53,968] {bash_operator.py:114} INFO - Running command:  spark-submit --master local[8] /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py 2016-12-01T00:00:00+00:00 /home/ec2-user/airflow/dags
+[2019-08-05 20:46:53,973] {bash_operator.py:123} INFO - Output:
+[2019-08-05 20:46:55,754] {bash_operator.py:127} INFO - 2019-08-05 20:46:55 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2019-08-05 20:46:56,412] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SparkContext:54 - Running Spark version 2.3.2
+[2019-08-05 20:46:56,431] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SparkContext:54 - Submitted application: pyspark_task_one.py
+[2019-08-05 20:46:56,482] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SecurityManager:54 - Changing view acls to: ec2-user
+[2019-08-05 20:46:56,482] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SecurityManager:54 - Changing modify acls to: ec2-user
+[2019-08-05 20:46:56,483] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SecurityManager:54 - Changing view acls groups to:
+[2019-08-05 20:46:56,483] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SecurityManager:54 - Changing modify acls groups to:
+[2019-08-05 20:46:56,483] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ec2-user); groups with view permissions: Set(); users  with modify permissions: Set(ec2-user); groups with modify permissions: Set()
+[2019-08-05 20:46:56,819] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 38817.
+[2019-08-05 20:46:56,857] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SparkEnv:54 - Registering MapOutputTracker
+[2019-08-05 20:46:56,875] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SparkEnv:54 - Registering BlockManagerMaster
+[2019-08-05 20:46:56,878] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2019-08-05 20:46:56,879] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+[2019-08-05 20:46:56,886] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-d380043e-aa44-49d7-a3fa-b226bb19407d
+[2019-08-05 20:46:56,903] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+[2019-08-05 20:46:56,918] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+[2019-08-05 20:46:56,989] {bash_operator.py:127} INFO - 2019-08-05 20:46:56 INFO  log:192 - Logging initialized @2745ms
+[2019-08-05 20:46:57,050] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+[2019-08-05 20:46:57,071] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Server:419 - Started @2829ms
+[2019-08-05 20:46:57,091] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  AbstractConnector:278 - Started ServerConnector@26ebc60{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+[2019-08-05 20:46:57,091] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+[2019-08-05 20:46:57,119] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@eb17c0c{/jobs,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,119] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@664f96ed{/jobs/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,123] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7374ff04{/jobs/job,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,123] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@32776801{/jobs/job/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,123] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2815785c{/stages,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,123] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7c4d2e85{/stages/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,123] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@58da2da2{/stages/stage,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,124] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@471c11f5{/stages/stage/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,125] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4e229389{/stages/pool,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,125] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3c3a5124{/stages/pool/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,126] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6f7863b7{/storage,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,127] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@484c5414{/storage/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,127] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1228384f{/storage/rdd,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,128] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7cf5e85f{/storage/rdd/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,129] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@50bc49ad{/environment,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,129] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a7a4b5a{/environment/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,130] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2943fe1a{/executors,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,131] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7aa75c7d{/executors/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,131] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@486483a5{/executors/threadDump,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,132] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@606c3168{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,139] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@56e9a051{/static,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,140] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7c1c1a74{/,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,141] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2e805215{/api,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,141] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6ab7eb18{/jobs/job/kill,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,142] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4432885a{/stages/stage/kill,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,144] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://ip-172-16-25-12.ec2.internal:4040
+[2019-08-05 20:46:57,500] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  SparkContext:54 - Added file file:/home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py at file:/home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py with timestamp 1565038017498
+[2019-08-05 20:46:57,502] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Utils:54 - Copying /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py to /tmp/spark-baf5723d-382d-40a0-98ad-bc2ba2fcf0c6/userFiles-04b3ee69-0657-4d41-ae97-fa9ae9290c79/pyspark_task_one.py
+[2019-08-05 20:46:57,583] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Executor:54 - Starting executor ID driver on host localhost
+[2019-08-05 20:46:57,610] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41223.
+[2019-08-05 20:46:57,611] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  NettyBlockTransferService:54 - Server created on ip-172-16-25-12.ec2.internal:41223
+[2019-08-05 20:46:57,612] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2019-08-05 20:46:57,640] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, ip-172-16-25-12.ec2.internal, 41223, None)
+[2019-08-05 20:46:57,643] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  BlockManagerMasterEndpoint:54 - Registering block manager ip-172-16-25-12.ec2.internal:41223 with 366.3 MB RAM, BlockManagerId(driver, ip-172-16-25-12.ec2.internal, 41223, None)
+[2019-08-05 20:46:57,646] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, ip-172-16-25-12.ec2.internal, 41223, None)
+[2019-08-05 20:46:57,647] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, ip-172-16-25-12.ec2.internal, 41223, None)
+[2019-08-05 20:46:57,775] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@752ec53b{/metrics/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,922] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/tmp/airflowtmpupvovjas/spark-warehouse').
+[2019-08-05 20:46:57,922] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  SharedState:54 - Warehouse path is 'file:/tmp/airflowtmpupvovjas/spark-warehouse'.
+[2019-08-05 20:46:57,931] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1a7f155b{/SQL,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,934] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@54f1abe{/SQL/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,934] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@182360d9{/SQL/execution,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,935] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2804b87b{/SQL/execution/json,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:57,935] {bash_operator.py:127} INFO - 2019-08-05 20:46:57 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1fe9be3e{/static/sql,null,AVAILABLE,@Spark}
+[2019-08-05 20:46:58,377] {bash_operator.py:127} INFO - 2019-08-05 20:46:58 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+[2019-08-05 20:47:00,289] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  FileSourceStrategy:54 - Pruning directories with:
+[2019-08-05 20:47:00,292] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  FileSourceStrategy:54 - Post-Scan Filters:
+[2019-08-05 20:47:00,296] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  FileSourceStrategy:54 - Output Data Schema: struct<value: string>
+[2019-08-05 20:47:00,303] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  FileSourceScanExec:54 - Pushed Filters:
+[2019-08-05 20:47:00,924] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  CodeGenerator:54 - Code generated in 206.315689 ms
+[2019-08-05 20:47:00,976] {bash_operator.py:127} INFO - 2019-08-05 20:47:00 INFO  MemoryStore:54 - Block broadcast_0 stored as values in memory (estimated size 277.5 KB, free 366.0 MB)
+[2019-08-05 20:47:01,029] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+[2019-08-05 20:47:01,031] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 23.3 KB, free: 366.3 MB)
+[2019-08-05 20:47:01,039] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+[2019-08-05 20:47:01,048] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2019-08-05 20:47:01,267] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Starting job: json at NativeMethodAccessorImpl.java:0
+[2019-08-05 20:47:01,284] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Got job 0 (json at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2019-08-05 20:47:01,285] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+[2019-08-05 20:47:01,285] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Parents of final stage: List()
+[2019-08-05 20:47:01,286] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Missing parents: List()
+[2019-08-05 20:47:01,305] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2019-08-05 20:47:01,340] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_1 stored as values in memory (estimated size 9.5 KB, free 366.0 MB)
+[2019-08-05 20:47:01,344] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.2 KB, free 366.0 MB)
+[2019-08-05 20:47:01,345] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 5.2 KB, free: 366.3 MB)
+[2019-08-05 20:47:01,346] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+[2019-08-05 20:47:01,358] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2019-08-05 20:47:01,359] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSchedulerImpl:54 - Adding task set 0.0 with 1 tasks
+[2019-08-05 20:47:01,401] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSetManager:54 - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8366 bytes)
+[2019-08-05 20:47:01,429] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  Executor:54 - Running task 0.0 in stage 0.0 (TID 0)
+[2019-08-05 20:47:01,435] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  Executor:54 - Fetching file:/home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py with timestamp 1565038017498
+[2019-08-05 20:47:01,493] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  Utils:54 - /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py has been previously copied to /tmp/spark-baf5723d-382d-40a0-98ad-bc2ba2fcf0c6/userFiles-04b3ee69-0657-4d41-ae97-fa9ae9290c79/pyspark_task_one.py
+[2019-08-05 20:47:01,583] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileScanRDD:54 - Reading File path: file:///home/ec2-user/airflow/dags/gh_spark/data/example_name_titles_daily.json/2016-12-01/test.jsonl, range: 0-230, partition values: [empty row]
+[2019-08-05 20:47:01,614] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  CodeGenerator:54 - Code generated in 18.412751 ms
+[2019-08-05 20:47:01,661] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  Executor:54 - Finished task 0.0 in stage 0.0 (TID 0). 1864 bytes result sent to driver
+[2019-08-05 20:47:01,672] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSetManager:54 - Finished task 0.0 in stage 0.0 (TID 0) in 283 ms on localhost (executor driver) (1/1)
+[2019-08-05 20:47:01,676] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSchedulerImpl:54 - Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2019-08-05 20:47:01,687] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 0.359 s
+[2019-08-05 20:47:01,698] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 0.426325 s
+[2019-08-05 20:47:01,790] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceStrategy:54 - Pruning directories with:
+[2019-08-05 20:47:01,800] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceStrategy:54 - Post-Scan Filters:
+[2019-08-05 20:47:01,800] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceStrategy:54 - Output Data Schema: struct<name: string, title: string>
+[2019-08-05 20:47:01,801] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceScanExec:54 - Pushed Filters:
+[2019-08-05 20:47:01,870] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  CodeGenerator:54 - Code generated in 27.231735 ms
+[2019-08-05 20:47:01,886] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_2 stored as values in memory (estimated size 277.5 KB, free 365.7 MB)
+[2019-08-05 20:47:01,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+[2019-08-05 20:47:01,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  BlockManagerInfo:54 - Added broadcast_2_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 23.3 KB, free: 366.2 MB)
+[2019-08-05 20:47:01,902] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Created broadcast 2 from showString at NativeMethodAccessorImpl.java:0
+[2019-08-05 20:47:01,907] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2019-08-05 20:47:01,921] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Starting job: showString at NativeMethodAccessorImpl.java:0
+[2019-08-05 20:47:01,922] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2019-08-05 20:47:01,922] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+[2019-08-05 20:47:01,923] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Parents of final stage: List()
+[2019-08-05 20:47:01,923] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Missing parents: List()
+[2019-08-05 20:47:01,927] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Submitting ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2019-08-05 20:47:01,928] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_3 stored as values in memory (estimated size 9.0 KB, free 365.7 MB)
+[2019-08-05 20:47:01,930] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  MemoryStore:54 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 5.0 KB, free 365.7 MB)
+[2019-08-05 20:47:01,931] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  BlockManagerInfo:54 - Added broadcast_3_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 5.0 KB, free: 366.2 MB)
+[2019-08-05 20:47:01,938] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  SparkContext:54 - Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+[2019-08-05 20:47:01,940] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2019-08-05 20:47:01,940] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSchedulerImpl:54 - Adding task set 1.0 with 1 tasks
+[2019-08-05 20:47:01,941] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  TaskSetManager:54 - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8366 bytes)
+[2019-08-05 20:47:01,941] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  Executor:54 - Running task 0.0 in stage 1.0 (TID 1)
+[2019-08-05 20:47:01,947] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  FileScanRDD:54 - Reading File path: file:///home/ec2-user/airflow/dags/gh_spark/data/example_name_titles_daily.json/2016-12-01/test.jsonl, range: 0-230, partition values: [empty row]
+[2019-08-05 20:47:01,973] {bash_operator.py:127} INFO - 2019-08-05 20:47:01 INFO  CodeGenerator:54 - Code generated in 24.129927 ms
+[2019-08-05 20:47:02,001] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  Executor:54 - Finished task 0.0 in stage 1.0 (TID 1). 1347 bytes result sent to driver
+[2019-08-05 20:47:02,004] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSetManager:54 - Finished task 0.0 in stage 1.0 (TID 1) in 63 ms on localhost (executor driver) (1/1)
+[2019-08-05 20:47:02,009] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSchedulerImpl:54 - Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2019-08-05 20:47:02,009] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 0.080 s
+[2019-08-05 20:47:02,013] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 0.087888 s
+[2019-08-05 20:47:02,026] {bash_operator.py:127} INFO - +--------------+--------------+
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |          name|         title|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - +--------------+--------------+
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |Russell Jurney|Data Scientist|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |Russell Jurney|        Author|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |Russell Jurney|     Dog Lover|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |     Bob Jones|           CEO|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - |     Susan Shu|      Attorney|
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - +--------------+--------------+
+[2019-08-05 20:47:02,027] {bash_operator.py:127} INFO - 
+[2019-08-05 20:47:02,036] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileSourceStrategy:54 - Pruning directories with:
+[2019-08-05 20:47:02,038] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileSourceStrategy:54 - Post-Scan Filters:
+[2019-08-05 20:47:02,038] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileSourceStrategy:54 - Output Data Schema: struct<name: string, title: string>
+[2019-08-05 20:47:02,039] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileSourceScanExec:54 - Pushed Filters:
+[2019-08-05 20:47:02,052] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_4 stored as values in memory (estimated size 277.5 KB, free 365.4 MB)
+[2019-08-05 20:47:02,068] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.4 MB)
+[2019-08-05 20:47:02,069] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Added broadcast_4_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 23.3 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,071] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  SparkContext:54 - Created broadcast 4 from javaToPython at NativeMethodAccessorImpl.java:0
+[2019-08-05 20:47:02,072] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2019-08-05 20:47:02,198] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  deprecation:1173 - mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+[2019-08-05 20:47:02,201] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileOutputCommitter:108 - File Output Committer Algorithm version is 1
+[2019-08-05 20:47:02,218] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  SparkContext:54 - Starting job: runJob at SparkHadoopWriter.scala:78
+[2019-08-05 20:47:02,223] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Registering RDD 13 (groupBy at /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py:30)
+[2019-08-05 20:47:02,225] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Got job 2 (runJob at SparkHadoopWriter.scala:78) with 1 output partitions
+[2019-08-05 20:47:02,225] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Final stage: ResultStage 3 (runJob at SparkHadoopWriter.scala:78)
+[2019-08-05 20:47:02,225] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Parents of final stage: List(ShuffleMapStage 2)
+[2019-08-05 20:47:02,226] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Missing parents: List(ShuffleMapStage 2)
+[2019-08-05 20:47:02,231] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Submitting ShuffleMapStage 2 (PairwiseRDD[13] at groupBy at /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py:30), which has no missing parents
+[2019-08-05 20:47:02,262] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_5 stored as values in memory (estimated size 15.9 KB, free 365.4 MB)
+[2019-08-05 20:47:02,270] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_5_piece0 stored as bytes in memory (estimated size 9.7 KB, free 365.4 MB)
+[2019-08-05 20:47:02,271] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Added broadcast_5_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 9.7 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,273] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  SparkContext:54 - Created broadcast 5 from broadcast at DAGScheduler.scala:1039
+[2019-08-05 20:47:02,277] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ShuffleMapStage 2 (PairwiseRDD[13] at groupBy at /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py:30) (first 15 tasks are for partitions Vector(0))
+[2019-08-05 20:47:02,277] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSchedulerImpl:54 - Adding task set 2.0 with 1 tasks
+[2019-08-05 20:47:02,279] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSetManager:54 - Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 8355 bytes)
+[2019-08-05 20:47:02,280] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  Executor:54 - Running task 0.0 in stage 2.0 (TID 2)
+[2019-08-05 20:47:02,727] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  FileScanRDD:54 - Reading File path: file:///home/ec2-user/airflow/dags/gh_spark/data/example_name_titles_daily.json/2016-12-01/test.jsonl, range: 0-230, partition values: [empty row]
+[2019-08-05 20:47:02,828] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 29
+[2019-08-05 20:47:02,835] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 44
+[2019-08-05 20:47:02,842] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 22
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 48
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 24
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 12
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 56
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 41
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 34
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 38
+[2019-08-05 20:47:02,843] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 11
+[2019-08-05 20:47:02,867] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Removed broadcast_1_piece0 on ip-172-16-25-12.ec2.internal:41223 in memory (size: 5.2 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 55
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 27
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 40
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 32
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 47
+[2019-08-05 20:47:02,899] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 9
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 30
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 49
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 19
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 6
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 46
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 51
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 37
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 36
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 26
+[2019-08-05 20:47:02,900] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 45
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 8
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 59
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 15
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 43
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 31
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 42
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 60
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 50
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 16
+[2019-08-05 20:47:02,901] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 21
+[2019-08-05 20:47:02,902] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 39
+[2019-08-05 20:47:02,902] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 35
+[2019-08-05 20:47:02,902] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 53
+[2019-08-05 20:47:02,904] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Removed broadcast_3_piece0 on ip-172-16-25-12.ec2.internal:41223 in memory (size: 5.0 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,906] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 54
+[2019-08-05 20:47:02,906] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 10
+[2019-08-05 20:47:02,907] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 57
+[2019-08-05 20:47:02,907] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 13
+[2019-08-05 20:47:02,908] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 17
+[2019-08-05 20:47:02,908] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 23
+[2019-08-05 20:47:02,908] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 18
+[2019-08-05 20:47:02,908] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 52
+[2019-08-05 20:47:02,909] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 33
+[2019-08-05 20:47:02,909] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 7
+[2019-08-05 20:47:02,910] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Removed broadcast_2_piece0 on ip-172-16-25-12.ec2.internal:41223 in memory (size: 23.3 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,911] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 14
+[2019-08-05 20:47:02,911] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 20
+[2019-08-05 20:47:02,911] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 58
+[2019-08-05 20:47:02,918] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 25
+[2019-08-05 20:47:02,918] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  ContextCleaner:54 - Cleaned accumulator 28
+[2019-08-05 20:47:02,951] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  PythonRunner:54 - Times: total = 460, boot = 411, init = 48, finish = 1
+[2019-08-05 20:47:02,963] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  Executor:54 - Finished task 0.0 in stage 2.0 (TID 2). 2101 bytes result sent to driver
+[2019-08-05 20:47:02,965] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSetManager:54 - Finished task 0.0 in stage 2.0 (TID 2) in 687 ms on localhost (executor driver) (1/1)
+[2019-08-05 20:47:02,969] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  PythonAccumulatorV2:54 - Connected to AccumulatorServer at host: 127.0.0.1 port: 36225
+[2019-08-05 20:47:02,970] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - ShuffleMapStage 2 (groupBy at /home/ec2-user/airflow/dags/gh_spark/pyspark_task_one.py:30) finished in 0.736 s
+[2019-08-05 20:47:02,971] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSchedulerImpl:54 - Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2019-08-05 20:47:02,972] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - looking for newly runnable stages
+[2019-08-05 20:47:02,972] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - running: Set()
+[2019-08-05 20:47:02,973] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - waiting: Set(ResultStage 3)
+[2019-08-05 20:47:02,973] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - failed: Set()
+[2019-08-05 20:47:02,976] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Submitting ResultStage 3 (MapPartitionsRDD[18] at saveAsTextFile at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2019-08-05 20:47:02,991] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_6 stored as values in memory (estimated size 78.5 KB, free 365.6 MB)
+[2019-08-05 20:47:02,993] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  MemoryStore:54 - Block broadcast_6_piece0 stored as bytes in memory (estimated size 30.5 KB, free 365.6 MB)
+[2019-08-05 20:47:02,993] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  BlockManagerInfo:54 - Added broadcast_6_piece0 in memory on ip-172-16-25-12.ec2.internal:41223 (size: 30.5 KB, free: 366.2 MB)
+[2019-08-05 20:47:02,994] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  SparkContext:54 - Created broadcast 6 from broadcast at DAGScheduler.scala:1039
+[2019-08-05 20:47:02,995] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[18] at saveAsTextFile at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2019-08-05 20:47:02,995] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSchedulerImpl:54 - Adding task set 3.0 with 1 tasks
+[2019-08-05 20:47:02,999] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  TaskSetManager:54 - Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, ANY, 7649 bytes)
+[2019-08-05 20:47:03,002] {bash_operator.py:127} INFO - 2019-08-05 20:47:02 INFO  Executor:54 - Running task 0.0 in stage 3.0 (TID 3)
+[2019-08-05 20:47:03,033] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
+[2019-08-05 20:47:03,035] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 4 ms
+[2019-08-05 20:47:03,056] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  FileOutputCommitter:108 - File Output Committer Algorithm version is 1
+[2019-08-05 20:47:03,108] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  PythonRunner:54 - Times: total = 62, boot = -266, init = 327, finish = 1
+[2019-08-05 20:47:03,118] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  FileOutputCommitter:535 - Saved output of task 'attempt_20190805204702_0018_m_000000_0' to file:/home/ec2-user/airflow/dags/gh_spark/data/example_master_titles_daily.json/2016-12-01/_temporary/0/task_20190805204702_0018_m_000000
+[2019-08-05 20:47:03,118] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  SparkHadoopMapRedUtil:54 - attempt_20190805204702_0018_m_000000_0: Committed
+[2019-08-05 20:47:03,119] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  Executor:54 - Finished task 0.0 in stage 3.0 (TID 3). 2067 bytes result sent to driver
+[2019-08-05 20:47:03,121] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  TaskSetManager:54 - Finished task 0.0 in stage 3.0 (TID 3) in 123 ms on localhost (executor driver) (1/1)
+[2019-08-05 20:47:03,122] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  TaskSchedulerImpl:54 - Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2019-08-05 20:47:03,123] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  DAGScheduler:54 - ResultStage 3 (runJob at SparkHadoopWriter.scala:78) finished in 0.142 s
+[2019-08-05 20:47:03,124] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  DAGScheduler:54 - Job 2 finished: runJob at SparkHadoopWriter.scala:78, took 0.904778 s
+[2019-08-05 20:47:03,143] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  SparkHadoopWriter:54 - Job job_20190805204702_0018 committed.
+[2019-08-05 20:47:03,185] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  SparkContext:54 - Invoking stop() from shutdown hook
+[2019-08-05 20:47:03,189] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  AbstractConnector:318 - Stopped Spark@26ebc60{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+[2019-08-05 20:47:03,201] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  SparkUI:54 - Stopped Spark web UI at http://ip-172-16-25-12.ec2.internal:4040
+[2019-08-05 20:47:03,224] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
+[2019-08-05 20:47:03,251] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  MemoryStore:54 - MemoryStore cleared
+[2019-08-05 20:47:03,251] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  BlockManager:54 - BlockManager stopped
+[2019-08-05 20:47:03,252] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
+[2019-08-05 20:47:03,254] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
+[2019-08-05 20:47:03,259] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  SparkContext:54 - Successfully stopped SparkContext
+[2019-08-05 20:47:03,261] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShutdownHookManager:54 - Shutdown hook called
+[2019-08-05 20:47:03,261] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-baf5723d-382d-40a0-98ad-bc2ba2fcf0c6
+[2019-08-05 20:47:03,261] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-94c06967-86ae-4782-9d9b-d36c76c6d281
+[2019-08-05 20:47:03,262] {bash_operator.py:127} INFO - 2019-08-05 20:47:03 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-baf5723d-382d-40a0-98ad-bc2ba2fcf0c6/pyspark-2f32d4c8-76f2-442c-87a3-a79349d14c6c
+[2019-08-05 20:47:03,287] {bash_operator.py:131} INFO - Command exited with return code 0
